@@ -1,34 +1,18 @@
 package fttd {
-	
-	import flash.display.MovieClip;
-	import flash.display.Sprite;
 	import flash.geom.Point;
 	
 	
-	public class Tile extends Sprite {
+	public class Tile {
 		
 		public var map:Map;
 		
-		//[Embed(source="../resource/trg1r/3924_z0.png")]
-		//[Bindable]
-		//public var imgCls:Class;
+		public var x:int;
+		public var y:int;
+		public var z:int;
 		
-		//[Embed(source="../resource/Tiles.swf")]
-		//public var TilesCls:Class;
-		
-		
-		
-		public function Tile(map:Map, tileMc:MovieClip) {
-			this.map = map;
-			//var img:BitmapAsset = BitmapAsset(new imgCls());
-			//var plane:MovieClipAsset = MovieClipAsset(new TilesCls.Plane());
-			
-			//var tileMc:Plane = new Plane();
-			
-			addChild(tileMc);
-			
+		public function Tile() {
+			//this.map = map; //map:Map
 		}
-		
 		
 		// Calculate screen coordinates based on grid coordinates. 
 		public static function CalculateScreenCoords(x:int, y:int, z:int):Point {
