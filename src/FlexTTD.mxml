@@ -1,4 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ui="ui.*" applicationComplete="applicationCompleteHandler()">
+	
+	<mx:TextArea x="20" height="32" width="640" textAlign="center" backgroundAlpha="0" borderStyle="none">
+		<mx:text>INSTRUCTIONS: Green are floor tiles, purple are walls. Click on any floor tile to activate pathfinding. Hover above any tile and press SPACE to change from wall to floor. Press 'A' to fire a piece of cheese at the cursor.</mx:text>
+	</mx:TextArea>
+	
+	<ui:MapCanvas id="mapCanvas" top="50" bottom="10" left="10" right="10">
+		
+	</ui:MapCanvas>
+	
+	<mx:Script>
+		<![CDATA[
+			
+			public function applicationCompleteHandler ():void {
+				// Add a listener to the keyboard event for changing the map or firing cheese.
+				stage.addEventListener(KeyboardEvent.KEY_DOWN, function (event:KeyboardEvent):void {
+					if (event.keyCode == Keyboard.SPACE) {
+						mapCanvas.map.x = (mapCanvas.width - mapCanvas.map.width) / 2;
+						mapCanvas.map.y = (mapCanvas.height - mapCanvas.map.height) / 2;
+						
+					} else if (event.keyCode == Keyboard.RIGHT) {
+						mapCanvas.map.x -= 100;
+						
+					} else if (event.keyCode == Keyboard.LEFT) {
+						mapCanvas.map.x += 100;
+						
+					} else if (event.keyCode == Keyboard.UP) {
+						mapCanvas.map.y += 100;
+						
+					} else if (event.keyCode == Keyboard.DOWN) {
+						mapCanvas.map.y -= 100;
+						
+					}
+					
+				});
+				
+			}
+			
+		]]>
+	</mx:Script>
 	
 </mx:Application>
