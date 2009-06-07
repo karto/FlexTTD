@@ -1,94 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ui="ui.*"
-	xmlns:fttd="fttd.flex.*"
-	xmlns:modest="com.modestmaps.flex.*"
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:fttd="fttd.flex.*"
+	layout="absolute" 
 	preinitialize="preinitializeHandler()"
-	initialize="initializeHandler()"
-	creationComplete="creationCompleteHandler()"
-	applicationComplete="applicationCompleteHandler()">
-
-	<!--ui:MapCanvas id="mapCanvas" top="50" bottom="10" left="10" right="10"></ui:MapCanvas-->
-	
-	<!--fttd:MapViewPort x="10" y="10" game="{game}"></ns1:MapViewPort-->
-	
-	<mx:Canvas backgroundColor="0" left="10" right="10" top="10" bottom="10" id="mainMapContainer">
-		<!--modest:MapComponent id="mainMap" 
-			width="100%" height="100%" draggable="true" provider="{mapProvider}"
-			zoom="1" center="4, 4"
-			doubleClick="mainMap.map.onDoubleClick(event)" /-->
-	</mx:Canvas>
+	creationComplete="creationCompleteHandler()">
 	
 	<mx:Script>
 		<![CDATA[
-			import com.modestmaps.mapproviders.IMapProvider;
-			import fttd.flex.MapComponent;
-			import fttd.map.MapProvider;
 			import fttd.Game;
-			
-			public var game:Game;
-			
-			public function preinitializeHandler ():void {
-				trace('Application preinitializeHandler');
-				game = new Game();
-			}
-			
-			public function initializeHandler ():void {
-				trace('Application initializeHandler');
-			}
-			public function creationCompleteHandler ():void {
-				trace('Application creationCompleteHandler');
-			}
-			public function applicationCompleteHandler ():void {
-				trace('Application applicationCompleteHandler');
-				initMapComponent();
-			}
-			
-			
-			public function initMapComponent ():void {
-				var mapProvider:IMapProvider = new MapProvider(2, 2);
-				var map:MapComponent = new MapComponent();
-				map.draggable = true;
-				map.provider = mapProvider;
-				//map.provider = "MICROSOFT_AERIAL";
-				map.id = "mainMap";
-				map.width = mainMapContainer.width;
-				map.height = mainMapContainer.height;
-				map.zoom = 0;
-				//map.center = "1, 1";
-				mainMapContainer.addChild(map);
-				map.addEventListener(MouseEvent.DOUBLE_CLICK, map.map.onDoubleClick);
-				mainMapContainer.rawChildren.addChild(map.map.grid.debugField)
-				map.map.grid.enforceBoundsEnabled = false;
-			}
-			
-			public function dis_applicationCompleteHandler ():void {
-				// Add a listener to the keyboard event for changing the map or firing cheese.
-				stage.addEventListener(KeyboardEvent.KEY_DOWN, function (event:KeyboardEvent):void {
-					/*
-					if (event.keyCode == Keyboard.SPACE) {
-						mapCanvas.map.x = (mapCanvas.width - mapCanvas.map.width) / 2;
-						mapCanvas.map.y = (mapCanvas.height - mapCanvas.map.height) / 2;
-						
-					} else if (event.keyCode == Keyboard.RIGHT) {
-						mapCanvas.map.x -= 100;
-						
-					} else if (event.keyCode == Keyboard.LEFT) {
-						mapCanvas.map.x += 100;
-						
-					} else if (event.keyCode == Keyboard.UP) {
-						mapCanvas.map.y += 100;
-						
-					} else if (event.keyCode == Keyboard.DOWN) {
-						mapCanvas.map.y -= 100;
-						
-					}
-					*/
-					
-				});
-				
-			}
-			
+			import fttd.bitmap.Data;
+			import fttd.tile.Slope;
+			import fttd.tile.Tile;
+			import mx.core.BitmapAsset;
+		import fttd.bitmaps.DirtPlane;
+		
+		[Bindable]
+		public var game:Game;
+		
+    private function preinitializeHandler ():void {
+    	
+    	game = new Game();
+    	
+    	
+			trace('stop');
+    }
+    
+		private function creationCompleteHandler ():void {
+		}
+		
+		
 		]]>
 	</mx:Script>
+	<mx:Panel title="as3isolib flex example" width="90%" height="90%" layout="absolute" verticalCenter="0" horizontalCenter="0">
+		<fttd:IsoViewComponent id="isoHostContainer" verticalCenter="0" horizontalCenter="0" mask="{maskContainer}" game="{game}"/>
+		<mx:Container id="maskContainer" width="100%" height="100%" backgroundColor="red"/>
+	</mx:Panel>
 	
+	
+
 </mx:Application>

@@ -8,11 +8,24 @@ Chris Sawyer. It attempts to mimic the original game as closely as possible whil
 
 
 == History ==
+=== Prototype 0.3 ===
+Moved to and examining as3isolib.
+Project linked with as3isolib trunk .r243 from subversion
+Bitmap data split out into seperate project.
+
+As3isolib is an open-source ActionScript 3.0 Isometric Library developed to assist in creating isometrically projected 
+content (such as games and graphics) targeted for the Flash player platform.
+http://code.google.com/p/as3isolib/
+
+--- Karto 2009.06.02
+
+
 === Prototype 0.2 ===
 Moved to and examining Modest Maps.
 Project linked with modestmaps trunk .r807 from subversion
 
-Modest Maps is a BSD-licensed display and interaction library for tile-based maps in Flash (ActionScript 2.0 and ActionScript 3.0) and Python.
+Modest Maps is a BSD-licensed display and interaction library for tile-based maps in Flash (ActionScript 2.0 and 
+ActionScript 3.0) and Python.
 http://modestmaps.com/
 
 --- Karto 2009.05.27
