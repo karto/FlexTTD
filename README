@@ -6,3 +6,11 @@ OpenTTD : http://www.openttd.org
 OpenTTD is an open source clone of the Microprose game "Transport Tycoon Deluxe", a popular game originally written by 
 Chris Sawyer. It attempts to mimic the original game as closely as possible while extending it with new features.
 
+== History ==
+=== Prototype 0.1 ===
+Examining IsoPathfinder.
+A* Pathfinding in an isometric world with Flex
+http://blog.topholt.com/2007/12/07/a-pathfinding-in-an-isometric-world-with-flex/ 
+--- Karto 2009.05.19
+
+
