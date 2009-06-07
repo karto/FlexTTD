@@ -1,20 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ui="ui.*" applicationComplete="applicationCompleteHandler()">
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" xmlns:ui="ui.*"
+	xmlns:fttd="fttd.flex.*"
+	xmlns:modest="com.modestmaps.flex.*"
+	preinitialize="preinitializeHandler()"
+	initialize="initializeHandler()"
+	creationComplete="creationCompleteHandler()"
+	applicationComplete="applicationCompleteHandler()">
+
+	<!--ui:MapCanvas id="mapCanvas" top="50" bottom="10" left="10" right="10"></ui:MapCanvas-->
 	
-	<mx:TextArea x="20" height="32" width="640" textAlign="center" backgroundAlpha="0" borderStyle="none">
-		<mx:text>INSTRUCTIONS: Green are floor tiles, purple are walls. Click on any floor tile to activate pathfinding. Hover above any tile and press SPACE to change from wall to floor. Press 'A' to fire a piece of cheese at the cursor.</mx:text>
-	</mx:TextArea>
+	<!--fttd:MapViewPort x="10" y="10" game="{game}"></ns1:MapViewPort-->
 	
-	<ui:MapCanvas id="mapCanvas" top="50" bottom="10" left="10" right="10">
-		
-	</ui:MapCanvas>
+	<mx:Canvas backgroundColor="0" left="10" right="10" top="10" bottom="10" id="mainMapContainer">
+		<!--modest:MapComponent id="mainMap" 
+			width="100%" height="100%" draggable="true" provider="{mapProvider}"
+			zoom="1" center="4, 4"
+			doubleClick="mainMap.map.onDoubleClick(event)" /-->
+	</mx:Canvas>
 	
 	<mx:Script>
 		<![CDATA[
+			import com.modestmaps.mapproviders.IMapProvider;
+			import fttd.flex.MapComponent;
+			import fttd.map.MapProvider;
+			import fttd.Game;
 			
+			public var game:Game;
+			
+			public function preinitializeHandler ():void {
+				trace('Application preinitializeHandler');
+				game = new Game();
+			}
+			
+			public function initializeHandler ():void {
+				trace('Application initializeHandler');
+			}
+			public function creationCompleteHandler ():void {
+				trace('Application creationCompleteHandler');
+			}
 			public function applicationCompleteHandler ():void {
+				trace('Application applicationCompleteHandler');
+				initMapComponent();
+			}
+			
+			
+			public function initMapComponent ():void {
+				var mapProvider:IMapProvider = new MapProvider(2, 2);
+				var map:MapComponent = new MapComponent();
+				map.draggable = true;
+				map.provider = mapProvider;
+				//map.provider = "MICROSOFT_AERIAL";
+				map.id = "mainMap";
+				map.width = mainMapContainer.width;
+				map.height = mainMapContainer.height;
+				map.zoom = 0;
+				//map.center = "1, 1";
+				mainMapContainer.addChild(map);
+				map.addEventListener(MouseEvent.DOUBLE_CLICK, map.map.onDoubleClick);
+				mainMapContainer.rawChildren.addChild(map.map.grid.debugField)
+				map.map.grid.enforceBoundsEnabled = false;
+			}
+			
+			public function dis_applicationCompleteHandler ():void {
 				// Add a listener to the keyboard event for changing the map or firing cheese.
 				stage.addEventListener(KeyboardEvent.KEY_DOWN, function (event:KeyboardEvent):void {
+					/*
 					if (event.keyCode == Keyboard.SPACE) {
 						mapCanvas.map.x = (mapCanvas.width - mapCanvas.map.width) / 2;
 						mapCanvas.map.y = (mapCanvas.height - mapCanvas.map.height) / 2;
@@ -32,6 +82,7 @@
 						mapCanvas.map.y -= 100;
 						
 					}
+					*/
 					
 				});
 				

@@ -6,11 +6,24 @@ OpenTTD : http://www.openttd.org
 OpenTTD is an open source clone of the Microprose game "Transport Tycoon Deluxe", a popular game originally written by 
 Chris Sawyer. It attempts to mimic the original game as closely as possible while extending it with new features.
 
+
 == History ==
+=== Prototype 0.2 ===
+Moved to and examining Modest Maps.
+Project linked with modestmaps trunk .r807 from subversion
+
+Modest Maps is a BSD-licensed display and interaction library for tile-based maps in Flash (ActionScript 2.0 and ActionScript 3.0) and Python.
+http://modestmaps.com/
+
+--- Karto 2009.05.27
+
+
 === Prototype 0.1 ===
 Examining IsoPathfinder.
+
 A* Pathfinding in an isometric world with Flex
 http://blog.topholt.com/2007/12/07/a-pathfinding-in-an-isometric-world-with-flex/ 
+
 --- Karto 2009.05.19
 
 
