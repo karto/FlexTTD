@@ -1,8 +1,8 @@
 package fttd.tile {
 
-import fttd.enum.Bit;
+import fttd.core.Enum;
 	
-public final class Corner extends Bit {
+public final class Corner extends Enum {
 	/**
 	 * Enumeration of tile corners
 	 */
@@ -11,9 +11,8 @@ public final class Corner extends Bit {
 	public static const CORNER_E:Corner = new Corner(2);
 	public static const CORNER_N:Corner = new Corner(3);
 	
-	
-	public function Corner(bit:int) {
-		super(bit);
+	public function Corner(value:int) {
+		super(value);
 	}
 	
 }

@@ -1,40 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:fttd="fttd.flex.*"
-	layout="absolute" 
+	layout="absolute"
 	preinitialize="preinitializeHandler()"
-	creationComplete="creationCompleteHandler()">
+	creationComplete="creationCompleteHandler()"
+	applicationComplete="onApplicationComplete()">
 	
 	<mx:Script>
 		<![CDATA[
-			import fttd.Game;
-			import fttd.bitmap.Data;
-			import fttd.tile.Slope;
-			import fttd.tile.Tile;
-			import mx.core.BitmapAsset;
-		import fttd.bitmaps.DirtPlane;
+			import fttd.Config;
+			import as3isolib.geom.Pt;
+			import fttd.LoadGame;
+			import fttd.flex.GameUi;
+		import fttd.Game;
+		import fttd.bitmap.Data;
+		import fttd.tile.Slope;
+		import fttd.tile.Tile;
+		import mx.core.BitmapAsset;
+		//import fttd.bitmaps.DirtPlane;
 		
 		[Bindable]
 		public var game:Game;
 		
     private function preinitializeHandler ():void {
-    	
-    	game = new Game();
-    	
-    	
+    	//game = new Game();
 			trace('stop');
     }
     
 		private function creationCompleteHandler ():void {
 		}
 		
+		private function onApplicationComplete ():void {
+			loadGame();
+		}
+		
+		
+		public function loadGame ():void {
+			LoadGame.load(function (game:Game):void {
+				trace('game: '+game);
+				switchToGame(game);
+			});
+		}
+		
+		public function switchToGame (game:Game):void {
+			this.game = game;
+			var ui:GameUi = new GameUi();
+			ui.game = game;
+			ui.width = width;
+			ui.height = height;
+			addChild(ui);
+			menuUi.visible = false;
+			//ui.mainViewport.viewportContainer.view.centerOnPt(new Pt(Config.TILE_SIZE * 3, Config.TILE_SIZE * 3));
+			
+		}
 		
 		]]>
 	</mx:Script>
-	<mx:Panel title="as3isolib flex example" width="90%" height="90%" layout="absolute" verticalCenter="0" horizontalCenter="0">
-		<fttd:IsoViewComponent id="isoHostContainer" verticalCenter="0" horizontalCenter="0" mask="{maskContainer}" game="{game}"/>
-		<mx:Container id="maskContainer" width="100%" height="100%" backgroundColor="red"/>
-	</mx:Panel>
 	
 	
-
+	<fttd:MenuUi id="menuUi" width="100%" height="100%" host="{this}"/>
+	
 </mx:Application>

@@ -7,6 +7,8 @@ public class Config {
 	//public static const TILE_HEIGHT:int = 512;
 	public static const TILE_DEPTH:int = 32;
 	
+	//	public static const TILE_SIZE:int = 128;
+	public static const TILE_SIZE:int = 32;
 	
 }
 }

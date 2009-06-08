@@ -5,7 +5,7 @@
 <libraryPath defaultLinkType="1">
 <libraryPathEntry kind="4" path=""/>
 <libraryPathEntry kind="1" linkType="1" path="libs"/>
-<libraryPathEntry kind="3" linkType="1" path="/FlexTTD_bitmap_data/bin/FlexTTD_bitmap_data.swc" useDefaultLinkType="false"/>
+<libraryPathEntry autoExtract="true" kind="3" linkType="3" path="/FlexTTD_bitmap_data/bin/FlexTTD_bitmap_data.swc" rslUrl="FlexTTD_bitmap_data.swf" useDefaultLinkType="false"/>
 <libraryPathEntry kind="3" linkType="1" path="/as3isolib_trunk/bin/as3isolib_trunk.swc" useDefaultLinkType="false"/>
 </libraryPath>
 <sourceAttachmentPath/>

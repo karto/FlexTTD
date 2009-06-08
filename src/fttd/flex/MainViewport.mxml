@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:fttd="fttd.flex.*"
+		layout="absolute" width="800" height="600"
+		title="Main Viewport"
+		addedToStage="onAddedToStage()"
+		creationComplete="onCreationComplete()">
+	
+	<fttd:Viewport id="viewportContainer" width="80%" height="70%" mask="{maskContainer}" game="{game}" horizontalCenter="0" verticalCenter="0"/>
+	<mx:Container id="maskContainer" width="100%" height="100%" backgroundColor="red" horizontalCenter="0" verticalCenter="0"/>
+		
+	<mx:VBox right="10" top="10" horizontalAlign="right">
+		<mx:Button label="Zoom In" width="100%" click="viewportContainer.zoomIn()"/>
+		<mx:Button label="Zoom Out" width="100%" click="viewportContainer.zoomOut()"/>
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+		import fttd.Game;
+		[Bindable]
+		public var game:Game;
+		
+		protected function onCreationComplete ():void {
+			viewportContainer.view.clipContent = false;
+			game.mainViewport = this;
+		}
+		
+		protected function onAddedToStage ():void {
+			trace('1');
+		}
+		
+		]]>
+	</mx:Script>
+	
+</mx:TitleWindow>

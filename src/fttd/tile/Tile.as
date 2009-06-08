@@ -3,7 +3,7 @@ package fttd.tile {
 	import flash.display.BitmapData;
 	
 	import fttd.bitmap.Manager;
-	import fttd.bitmaps.DirtPlane;
+	//import fttd.bitmaps.DirtPlane;
 	
 
 
@@ -47,7 +47,7 @@ public class Tile {
 	protected var _bitmapData:BitmapData;
 	public function get bitmapData():BitmapData {
 		if ( ! _bitmapData) {
-			_bitmapData = new DirtPlane(0, 0);
+			//_bitmapData = new DirtPlane(0, 0);
 		}
 		return _bitmapData;
 	}
@@ -74,13 +74,6 @@ public class Tile {
 	protected var _z:int;
 	public function set z(value:int):void { _z = value; }
 	public function get z():int { return _z; }
-	
-	/* Tile slope
-	 * Slope of the tile
-	 */
-	protected var _slope:Slope = fttd.tile.Slope.SLOPE_FLAT;
-	public function set slope(value:Slope):void { _slope = value; }
-	public function get slope():Slope { return _slope; }
 	
 		
 	/** Tile description for the 'land area information' tool */
@@ -118,7 +111,7 @@ public class Tile {
 	
 	public function getSpriteId ():int {
 		var i:int = 3981;
-		i += slope.bit;
+		//i += slope.value;
 		return i;
 	}
 	

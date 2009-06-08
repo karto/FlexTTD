@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="400" height="300">
+	<mx:VBox horizontalCenter="0" verticalCenter="0">
+		<mx:Button label="Load Savegame" click="onClickLoadSavegame()"/>
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.formatters.SwitchSymbolFormatter;
+		
+		import fttd.Game;
+		
+		public var host:FlexTTD;
+		
+		public function onClickLoadSavegame ():void {
+			trace('Load savegame');
+			
+			(parent as FlexTTD).loadGame();
+		}
+		
+		/*		
+		private function dis_creationCompleteHandler ():void {
+var dataLoader:DataLoader = new DataLoader();
+dataLoader.load( "/xml/application.xml" );
+dataLoader.addEventListener( DataLoaderEvent.ON_LOAD_COMPLETE, dataCompleteHandler, false, 0, true );
+			
+		}
+		// How I'am instantiating the class in my document class
+private function dataCompleteHandler( e:DataLoaderEvent ):void
+{
+    trace( e.data );
+}
+ 
+ 
+// code inside my DataLoader Class
+private function addLoaderListeners():void
+{
+    loader.addEventListener( ProgressEvent.PROGRESS, progressHandler, false, 0, true );
+    loader.addEventListener( Event.COMPLETE, completeHandler, false, 0 );
+    loader.addEventListener( IOErrorEvent.IO_ERROR, ioErrorHandler, false, 0, true );
+}
+ 
+private function completeHandler( e:Event ):void
+{
+    var target:URLLoader = URLLoader( e.currentTarget );
+    removeLoaderListeners();
+ 
+    dispatchDataLoaderEvent( target.data );
+} 
+		*/
+		]]>
+	</mx:Script>
+	
+</mx:Canvas>

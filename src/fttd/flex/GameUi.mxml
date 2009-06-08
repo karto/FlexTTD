@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="400" height="300" xmlns:fttd="fttd.flex.*"
+	creationComplete="onCreationComplete()"
+	initialize="onInitialize()">
+	
+	<mx:Script>
+		<![CDATA[
+		import fttd.Game;
+		
+		[Bindable]
+		public var game:Game;
+		
+		protected function onCreationComplete():void {
+		}
+		protected function onInitialize():void {
+			mainViewport.game = game;
+			/*
+			extraViewport1.game = game;
+			extraViewport2.game = game;
+			extraViewport3.game = game;
+			*/
+		}
+		
+		
+		]]>
+	</mx:Script>
+	
+	<mx:Panel layout="absolute" top="10" bottom="10" left="10" right="10">
+		<mx:title>FlexTTD as3isolib prototype 3</mx:title>
+		<mx:VBox width="100%" height="100%">
+			<mx:HBox paddingLeft="10" paddingTop="10" paddingBottom="10" paddingRight="10">
+				<mx:Button label="Button"/>
+				<mx:Button label="Button"/>
+			</mx:HBox>
+			<mx:HDividedBox width="100%" height="100%">
+				<fttd:MainViewport id="mainViewport" width="66%" height="100%" game="{game}"/>
+				<mx:VDividedBox width="33%" height="100%">
+					<!--
+					<fttd:ExtraViewport id="extraViewport1" width="100%" height="100%" game="{game}"/>
+					<fttd:ExtraViewport id="extraViewport2" width="100%" height="100%" game="{game}"/>
+					<fttd:ExtraViewport id="extraViewport3" width="100%" height="100%" game="{game}"/>
+					-->
+				</mx:VDividedBox>
+			</mx:HDividedBox>
+		</mx:VBox>
+		
+	</mx:Panel>
+	
+</mx:Canvas>

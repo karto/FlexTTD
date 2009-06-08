@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:fttd="fttd.flex.*" 
+		layout="absolute" width="500" height="300"
+		title="Extra Viewport" showCloseButton="true" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+	
+	<mx:VBox x="0" y="0" width="100%" height="100%" verticalGap="0">
+		
+		<mx:Canvas width="100%" height="100%">
+			<fttd:Viewport id="viewportContainer" verticalCenter="0" horizontalCenter="0" mask="{maskContainer}" game="{game}"/>
+			<mx:Container id="maskContainer" width="100%" height="100%" backgroundColor="red"/>
+		</mx:Canvas>
+			
+		<mx:HBox bottom="0" paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10">
+			<mx:Button label="In" click="viewportContainer.zoomIn()"/>
+			<mx:Button label="Out" click="viewportContainer.zoomOut()"/>
+			<mx:Button label="From main" click="centerFromMain()"/>
+			<mx:Button label="To main" click="centerToMain()"/>
+		</mx:HBox>
+			
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+			import as3isolib.geom.Pt;
+		import fttd.Game;
+		[Bindable]
+		public var game:Game;
+		
+		protected function centerFromMain ():void {
+			var pt:Pt = game.mainViewport.viewportContainer.view.currentPt;
+			viewportContainer.view.centerOnPt(pt, false);
+			viewportContainer.view.render(true);
+		}
+		
+		protected function centerToMain ():void {
+			var pt:Pt = viewportContainer.view.currentPt;
+			game.mainViewport.viewportContainer.view.centerOnPt(pt, false);
+			game.mainViewport.viewportContainer.view.render(true);
+		}
+		
+		
+		]]>
+	</mx:Script>
+	
+</mx:TitleWindow>
