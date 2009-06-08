@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flexLibProperties version="1">
 <includeClasses>
-<classEntry path="fttd.bitmap.data.Embed"/>
+<classEntry path="fttd.bitmap.data.Landscape"/>
 </includeClasses>
 <includeResources/>
 <namespaceManifests/>

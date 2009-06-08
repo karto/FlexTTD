@@ -1,0 +1,57 @@
+4023_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-6
+4023_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-62 y_offs=-3
+4023_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-2
+4024_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-10
+4024_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-62 y_offs=-5
+4024_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-3
+4025_z0.png created_by=Ben_Robbins_ x_offs=-125 y_offs=-7
+4025_z1.png created_by=Ben_Robbins_ x_offs=-63 y_offs=-4
+4025_z2.png x_offs=-32 created_by=Ben_Robbins_ y_offs=-2
+4026_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-9
+4026_z1.png x_offs=-62 created_by=Ben_Robbins_ y_offs=-5
+4026_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-3
+4027_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-10
+4027_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-62 y_offs=-5
+4027_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-3
+4028_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-12
+4028_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-62 y_offs=-6
+4028_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-3
+4029_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-9
+4029_z1.png x_offs=-62 created_by=Ben_Robbins_ y_offs=-5
+4029_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-3
+4030_z0.png created_by=Ben_Robbins_ x_offs=-125 y_offs=-10
+4030_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-63 y_offs=-5
+4030_z2.png x_offs=-32 created_by=Ben_Robbins_ y_offs=-3
+4031_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-39
+4031_z1.png x_offs=-62 created_by=Ben_Robbins_ y_offs=-20
+4031_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-10
+4032_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-41
+4032_z1.png x_offs=-62 created_by=Ben_Robbins_ y_offs=-21
+4032_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-11
+4033_z0.png created_by=Ben_Robbins_ x_offs=-125 y_offs=-41
+4033_z1.png created_by=Ben_Robbins_ x_offs=-63 y_offs=-20
+4033_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-11
+4034_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-42
+4034_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-62 y_offs=-21
+4034_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-11
+4035_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-41
+4035_z1.png x_offs=-62 created_by=Ben_Robbins_ y_offs=-21
+4035_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-11
+4036_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-38
+4036_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-62 y_offs=-19
+4036_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-10
+4037_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-42
+4037_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-62 y_offs=-21
+4037_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-11
+4038_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-72
+4038_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-62 y_offs=-36
+4038_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-18
+4039_z0.png created_by=Ben_Robbins_ x_offs=-125 y_offs=-9
+4039_z1.png created_by=Ben_Robbins_ x_offs=-62 y_offs=-3
+4039_z2.png x_offs=-32 created_by=Ben_Robbins_ y_offs=-3
+4040_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-41
+4040_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-62 y_offs=-21
+4040_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-11
+4041_z0.png created_by=Ben_Robbins_ x_offs=-124 y_offs=-44
+4041_z1.png Software=Paint.NET v3.22 created_by=Ben_Robbins_ x_offs=-62 y_offs=-22
+4041_z2.png x_offs=-31 created_by=Ben_Robbins_ y_offs=-11
