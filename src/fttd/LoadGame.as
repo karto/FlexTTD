@@ -18,7 +18,7 @@ public class LoadGame {
 	
 	public static function load (callback:Function):void {
 		var loader:URLLoader = new URLLoader();
-		loader.load(new URLRequest("../resource/savegame.xml"));
+		loader.load(new URLRequest("savegame.xml"));
 		loader.addEventListener(Event.COMPLETE, function (event:Event):void {
 			var xml:XML = new XML(event.target.data);
 			var game:Game = unserialize(xml);

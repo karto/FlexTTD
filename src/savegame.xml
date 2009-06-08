@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flexttd version="0.1">
+	<tiles>
+		<grass x="0" y="0" z="0" />
+		<grass x="0" y="1" z="0" />
+		<grass x="0" y="2" z="0" />
+		<grass x="0" y="3" z="0" />
+		<grass x="0" y="4" z="0" />
+		<grass x="0" y="5" z="0" />
+		<grass x="0" y="6" z="0" />
+		<grass x="0" y="7" z="0" />
+		
+		<grass x="1" y="0" z="0" />
+		<grass x="1" y="1" z="0" />
+		<grass x="1" y="2" z="0" slope="S" />
+		<grass x="1" y="3" z="0" slope="SE" />
+		<grass x="1" y="4" z="0" slope="SE" />
+		<grass x="1" y="5" z="0" slope="E" />
+		<grass x="1" y="6" z="0" />
+		<grass x="1" y="7" z="0" />
+		
+		<grass x="2" y="0" z="0" />
+		<grass x="2" y="1" z="0" slope="S" />
+		<grass x="2" y="2" z="0" slope="WSE" />
+		<grass x="2" y="3" z="1" />
+		<grass x="2" y="4" z="1" />
+		<grass x="2" y="5" z="0" slope="SEN"/>
+		<grass x="2" y="6" z="0" slope="E" />
+		<grass x="2" y="7" z="0" />
+		
+		<grass x="3" y="0" z="0" />
+		<grass x="3" y="1" z="0" slope="SW" />
+		<grass x="3" y="2" z="1" />
+		<grass x="3" y="3" z="1" />
+		<grass x="3" y="4" z="1" />
+		<grass x="3" y="5" z="1" />
+		<grass x="3" y="6" z="0" slope="NE" />
+		<grass x="3" y="7" z="0" />
+		
+		<grass x="4" y="0" z="0" />
+		<grass x="4" y="1" z="0" slope="SW" />
+		<grass x="4" y="2" z="1" />
+		<grass x="4" y="3" z="1" />
+		<grass x="4" y="4" z="1" />
+		<grass x="4" y="5" z="1" />
+		<grass x="4" y="6" z="0" slope="NE" />
+		<grass x="4" y="7" z="0" />
+		
+		<grass x="5" y="0" z="0" />
+		<grass x="5" y="1" z="0" slope="W" />
+		<grass x="5" y="2" z="0" slope="NWS" />
+		<grass x="5" y="3" z="1" />
+		<grass x="5" y="4" z="1" />
+		<grass x="5" y="5" z="0" slope="ENW" />
+		<grass x="5" y="6" z="0" slope="N" />
+		<grass x="5" y="7" z="0" />
+		
+		<grass x="6" y="0" z="0" />
+		<grass x="6" y="1" z="0" />
+		<grass x="6" y="2" z="0" slope="W" />
+		<grass x="6" y="3" z="0" slope="NW" />
+		<grass x="6" y="4" z="0" slope="NW" />
+		<grass x="6" y="5" z="0" slope="N" />
+		<grass x="6" y="6" z="0" />
+		<grass x="6" y="7" z="0" />
+		
+		<grass x="7" y="0" z="0" />
+		<grass x="7" y="1" z="0" />
+		<grass x="7" y="2" z="0" />
+		<grass x="7" y="3" z="0" />
+		<grass x="7" y="4" z="0" />
+		<grass x="7" y="5" z="0" />
+		<grass x="7" y="6" z="0" />
+		<grass x="7" y="7" z="0" />
+		
+		
+	</tiles>
+	
+	<!--
+	
+	public function buildMap ():Array {
+		var res:Array = new Array();
+		var tile:Tile;
+		for(var x:int = 0; x < 8; ++x) {
+			for(var y:int = 0; y < 8; ++y) {
+				res.push(tile = new Tile());
+				tile.x = x;
+				tile.y = y;
+				tile.z = (2 <= x && 5 >= x && 2 <= y && 5 >= y) ? 1 : 0;
+				tile.slope = Slope.SLOPE_FLAT;
+
+				if (1 == x && 2 == y) tile.slope = Slope.SLOPE_S;
+				if (1 == x && 3 == y) tile.slope = Slope.SLOPE_SE;
+				if (1 == x && 4 == y) tile.slope = Slope.SLOPE_SE;
+				if (1 == x && 5 == y) tile.slope = Slope.SLOPE_E;
+				
+				if (2 == x && 1 == y) tile.slope = Slope.SLOPE_S;
+				if (2 == x && 2 == y) { tile.slope = Slope.SLOPE_WSE; tile.z = 0; }
+				//if (2 == x && 3 == y) tile.slope = Slope.SLOPE_FLAT;
+				//if (2 == x && 4 == y) tile.slope = Slope.SLOPE_FLAT;
+				if (2 == x && 5 == y) { tile.slope = Slope.SLOPE_SEN; tile.z = 0; }
+				if (2 == x && 6 == y) tile.slope = Slope.SLOPE_E;
+				
+				if (3 == x && 1 == y) tile.slope = Slope.SLOPE_SW;
+				//if (3 == x && 2 == y) tile.slope = Slope.SLOPE_FLAT;
+				//if (3 == x && 3 == y) tile.slope = Slope.SLOPE_FLAT;
+				//if (3 == x && 4 == y) tile.slope = Slope.SLOPE_FLAT;
+				//if (3 == x && 5 == y) tile.slope = Slope.SLOPE_FLAT;
+				if (3 == x && 6 == y) tile.slope = Slope.SLOPE_NE;
+				
+				if (4 == x && 1 == y) tile.slope = Slope.SLOPE_SW;
+				//if (4 == x && 2 == y) tile.slope = Slope.SLOPE_FLAT;
+				//if (4 == x && 3 == y) tile.slope = Slope.SLOPE_FLAT;
+				//if (4 == x && 4 == y) tile.slope = Slope.SLOPE_FLAT;
+				//if (4 == x && 5 == y) tile.slope = Slope.SLOPE_FLAT;
+				if (4 == x && 6 == y) tile.slope = Slope.SLOPE_NE;
+				
+				if (5 == x && 1 == y) tile.slope = Slope.SLOPE_W;
+				if (5 == x && 2 == y) { tile.slope = Slope.SLOPE_NWS; tile.z = 0; }
+				//if (5 == x && 3 == y) tile.slope = Slope.SLOPE_FLAT;
+				//if (5 == x && 4 == y) tile.slope = Slope.SLOPE_FLAT;
+				if (5 == x && 5 == y) { tile.slope = Slope.SLOPE_ENW; tile.z = 0; }
+				if (5 == x && 6 == y) tile.slope = Slope.SLOPE_N;
+				
+				if (6 == x && 2 == y) tile.slope = Slope.SLOPE_W;
+				if (6 == x && 3 == y) tile.slope = Slope.SLOPE_NW;
+				if (6 == x && 4 == y) tile.slope = Slope.SLOPE_NW;
+				if (6 == x && 5 == y) tile.slope = Slope.SLOPE_N;
+				
+			}
+		}
+		return res;
+	}
+	
+	-->
+	
+	<!--
+		
+		protected function dis_initTiles ():void {
+			var seedTiles:Array = new Array(
+				[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+				[0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0]
+				[0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0]
+				[0,1,1,2,2,1,1,0,0,0,0,0,0,0,0,0]
+				[0,1,1,2,2,1,1,0,0,0,0,0,0,0,0,0]
+				[0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0]
+				[0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0]
+				[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+				[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+				[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+				[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+				[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+				[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+				[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+				[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+				[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+			);
+			var eachTile:Tile;
+			for(var x:int = 0; x < seedTiles.length; ++x) {
+				for(var y:int = 0; y < seedTiles[0].length; ++y) {
+					tiles.push( eachTile = new Tile() );
+					eachTile.x = x;
+					eachTile.y = y;
+					eachTile.z = seedTiles[x][y];
+				}
+			}
+
+		}
+-->
+</flexttd>
