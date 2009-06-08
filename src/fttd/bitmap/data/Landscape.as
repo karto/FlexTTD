@@ -9,15 +9,6 @@ public class Landscape {
 	
 	/* Embed ground tile
 	 */
-	/*
-	[Embed(source="../resource/trg1r/3924_z0.png")] public static var cls_3924_z0:Class; offset["3924_z0"] = new Point(-128, -4);
-	[Embed(source="../resource/trg1r/3924_z1.png")] public static var cls_3924_z1:Class;
-	[Embed(source="../resource/trg1r/3924_z2.png")] public static var cls_3924_z2:Class;
-	
-	[Embed(source="../resource/Ground-No_Lines-Rocks/4023_z0.png")] public static var cls_4023_z0:Class;
-	[Embed(source="../resource/Ground-No_Lines-Rocks/4023_z1.png")] public static var cls_4023_z1:Class;
-	[Embed(source="../resource/Ground-No_Lines-Rocks/4023_z2.png")] public static var cls_4023_z2:Class;
-	*/
 	
 	
 
