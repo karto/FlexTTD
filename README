@@ -8,6 +8,12 @@ Chris Sawyer. It attempts to mimic the original game as closely as possible whil
 
 
 == History ==
+=== Prototype 0.4 ===
+Still using as3isolib. Added loadgame and map tile load and garbage collection.
+
+--- Karto 2009.06.06
+
+
 === Prototype 0.3 ===
 Moved to and examining as3isolib.
 Project linked with as3isolib trunk .r243 from subversion
